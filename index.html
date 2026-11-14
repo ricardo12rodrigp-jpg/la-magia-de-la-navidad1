@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🎄 La Magia de la Navidad</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Luces navideñas -->
+    <div class="luces">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#poema">Nuestro mensaje</a>
+        <a href="#arbol">Árbol navideño</a>
+        <a href="#regalo">Sorpresa</a>
+    </nav>
+
+    <!-- Portada -->
+    <header id="inicio">
+
+        <p class="etiqueta">✦ UNA ÉPOCA PARA COMPARTIR ✦</p>
+
+        <h1>La Magia de la Navidad</h1>
+
+        <h2>Donde los mejores regalos son los momentos juntos</h2>
+
+        <div class="decoracion">❄ ✨ 🎄 ✨ ❄</div>
+
+        <a href="#poema" class="enlace-boton">
+            Descubrir la magia ↓
+        </a>
+
+    </header>
+
+    <!-- Cuenta regresiva -->
+    <section class="contador-seccion">
+
+        <h2>🎅 La Navidad está llegando</h2>
+
+        <p>Falta muy poco para una de las noches más especiales del año.</p>
+
+        <div class="contador">
+
+            <div class="tiempo">
+                <span id="dias">00</span>
+                <small>DÍAS</small>
+            </div>
+
+            <div class="tiempo">
+                <span id="horas">00</span>
+                <small>HORAS</small>
+            </div>
+
+            <div class="tiempo">
+                <span id="minutos">00</span>
+                <small>MINUTOS</small>
+            </div>
+
+            <div class="tiempo">
+                <span id="segundos">00</span>
+                <small>SEGUNDOS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Poema -->
+    <section id="poema" class="seccion-poema">
+
+        <p class="etiqueta">✦ UN MENSAJE ESPECIAL ✦</p>
+
+        <h2>Una Navidad en el corazón</h2>
+
+        <div class="poema">
+
+            Diciembre llega con luces y emoción,<br>
+            regalos, abrazos y una gran celebración.<br>
+            La familia se reúne alrededor de la cena,<br>
+            compartiendo sonrisas y momentos que llenan.<br>
+
+            <br>
+
+            Aunque algunas sillas permanezcan vacías,<br>
+            sus recuerdos nos acompañan todavía.<br>
+            Brindemos por quienes están y quienes se fueron,<br>
+            porque en nuestros corazones nunca desaparecieron.<br>
+
+            <br>
+
+            Pues la Navidad no está en lo material,<br>
+            sino en el amor que nos une de manera especial.
+
+        </div>
+
+        <img src="img/navidad3.png" alt="Celebración navideña">
+
+        <p class="frase">
+            "La verdadera magia de la Navidad vive en nuestros corazones".
+        </p>
+
+    </section>
+
+    <!-- Árbol interactivo -->
+    <section id="arbol" class="seccion-arbol">
+
+        <p class="etiqueta">✦ UN POCO DE MAGIA ✦</p>
+
+        <h2>El árbol de Navidad</h2>
+
+        <p>Enciende sus luces y dale vida a la Navidad.</p>
+
+        <div id="arbol-navidad" class="arbol">
+
+            <div class="estrella">⭐</div>
+
+            <div class="nivel nivel1">🎄</div>
+
+            <div class="nivel nivel2">🎄</div>
+
+            <div class="nivel nivel3">🎄</div>
+
+            <div class="tronco">🪵</div>
+
+            <div class="luces-arbol">
+                <span>🔴</span>
+                <span>🟡</span>
+                <span>🔵</span>
+                <span>🟢</span>
+                <span>🔴</span>
+                <span>🟡</span>
+                <span>🔵</span>
+            </div>
+
+        </div>
+
+        <button id="boton-luces" onclick="alternarLuces()">
+            Apagar luces ✨
+        </button>
+
+    </section>
+
+    <!-- Regalo sorpresa -->
+    <section id="regalo" class="seccion-regalo">
+
+        <p class="etiqueta">✦ UNA SORPRESA PARA TI ✦</p>
+
+        <h2>Un regalo especial</h2>
+
+        <p>Hay regalos que no necesitan envoltura.</p>
+
+        <div id="caja-regalo" onclick="abrirRegalo()">
+            🎁
+        </div>
+
+        <button onclick="abrirRegalo()">
+            Abrir mi regalo
+        </button>
+
+        <div id="mensaje-regalo">
+
+            <h3>❤️ ¡Feliz Navidad! ❤️</h3>
+
+            <p>
+                Que nunca falten motivos para sonreír,
+                personas con quienes compartir,
+                sueños por cumplir y recuerdos que guardar.
+
+                Que la felicidad llegue a tu hogar
+                y permanezca durante todo el año.
+            </p>
+
+            <div>🎄 ✨ 🎅 ✨ 🎄</div>
+
+        </div>
+
+    </section>
+
+    <!-- Personalizar colores -->
+    <section class="personalizar">
+
+        <h2>Elige tu ambiente navideño</h2>
+
+        <button onclick="CambiarColorDeFondo('clasico')">
+            🎄 Clásico
+        </button>
+
+        <button onclick="CambiarColorDeFondo('noche')">
+            🌙 Noche
+        </button>
+
+        <button onclick="CambiarColorDeFondo('rojo')">
+            ❤️ Rojo
+        </button>
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+
+        <div>❄️ 🎄 ⭐ 🎄 ❄️</div>
+
+        <h2>La Navidad vive en el corazón</h2>
+
+        <p>
+            Hecho con cariño y espíritu navideño.
+        </p>
+
+        <p class="copyright">
+            © 2026 | Una Navidad en el corazón
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

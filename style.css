@@ -1,0 +1,517 @@
+
+/* FUENTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+
+/* CONFIGURACION GENERAL */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #073b2b;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    transition: background 0.5s ease;
+    overflow-x: hidden;
+}
+
+
+/* LUCES NAVIDEÑAS */
+
+.luces {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-top: 5px solid #222;
+    padding: 12px 0;
+    width: 100%;
+}
+
+.luces span {
+    width: 15px;
+    height: 24px;
+    border-radius: 50%;
+    animation: parpadear 1s infinite alternate;
+}
+
+.luces span:nth-child(4n+1) {
+    background: red;
+    box-shadow: 0 0 15px red;
+}
+
+.luces span:nth-child(4n+2) {
+    background: yellow;
+    box-shadow: 0 0 15px yellow;
+    animation-delay: 0.3s;
+}
+
+.luces span:nth-child(4n+3) {
+    background: blue;
+    box-shadow: 0 0 15px blue;
+    animation-delay: 0.6s;
+}
+
+.luces span:nth-child(4n) {
+    background: lime;
+    box-shadow: 0 0 15px lime;
+    animation-delay: 0.9s;
+}
+
+@keyframes parpadear {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* NAVEGACION */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* PORTADA */
+
+header {
+    padding: 100px 20px;
+    background:
+        radial-gradient(circle at center, rgba(20, 100, 60, 0.5), transparent 70%);
+}
+
+.etiqueta {
+    color: #ffd700;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: clamp(42px, 7vw, 75px);
+    color: #ffd700;
+    text-shadow: 0 0 15px #d69e00;
+    animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+    from {
+        text-shadow: 0 0 5px gold;
+    }
+
+    to {
+        text-shadow: 0 0 25px gold, 0 0 40px white;
+    }
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.decoracion {
+    font-size: 35px;
+    margin: 30px;
+}
+
+.enlace-boton {
+    display: inline-block;
+    background: #b30000;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px solid gold;
+    transition: 0.3s;
+}
+
+.enlace-boton:hover {
+    background: #ffd700;
+    color: #073b2b;
+    transform: scale(1.08);
+}
+
+
+/* SECCIONES */
+
+section {
+    padding: 65px 20px;
+}
+
+section h2 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 38px;
+    color: #ffd700;
+}
+
+section > p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* CONTADOR */
+
+.contador-seccion {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.tiempo {
+    background: #a50000;
+    border: 2px solid gold;
+    border-radius: 15px;
+    width: 110px;
+    padding: 20px 10px;
+    box-shadow: 0 0 15px #0005;
+}
+
+.tiempo span {
+    display: block;
+    color: #ffd700;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.tiempo small {
+    display: block;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
+
+
+/* POEMA */
+
+.seccion-poema {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.poema {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 35px 20px;
+    line-height: 2;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.25);
+    border-left: 4px solid gold;
+    border-right: 4px solid gold;
+    border-radius: 15px;
+}
+
+.seccion-poema img {
+    width: 300px;
+    max-width: 85%;
+    border: 4px solid gold;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #ffd70066;
+    margin: 20px;
+}
+
+.frase {
+    font-style: italic;
+    color: #ffd700;
+    font-size: 20px;
+}
+
+
+/* ARBOL NAVIDEÑO */
+
+.seccion-arbol {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.arbol {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px auto;
+    width: 250px;
+    padding-top: 15px;
+}
+
+.estrella {
+    font-size: 55px;
+    animation: estrella 1s infinite alternate;
+}
+
+@keyframes estrella {
+    from {
+        filter: drop-shadow(0 0 3px gold);
+    }
+
+    to {
+        filter: drop-shadow(0 0 20px yellow);
+    }
+}
+
+.nivel {
+    color: green;
+    font-size: 85px;
+    line-height: 0.8;
+    filter: drop-shadow(0 0 8px #00ff55);
+}
+
+.nivel1 {
+    font-size: 65px;
+}
+
+.nivel2 {
+    font-size: 90px;
+}
+
+.nivel3 {
+    font-size: 115px;
+}
+
+.tronco {
+    font-size: 35px;
+    margin-top: -5px;
+}
+
+.luces-arbol {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    animation: lucesArbol 0.8s infinite alternate;
+}
+
+@keyframes lucesArbol {
+    from {
+        filter: brightness(0.5);
+    }
+
+    to {
+        filter: brightness(1.8) drop-shadow(0 0 8px gold);
+    }
+}
+
+.arbol.apagado .luces-arbol,
+.arbol.apagado .estrella {
+    animation: none;
+    filter: grayscale(1) brightness(0.5);
+}
+
+.arbol.apagado .nivel {
+    filter: brightness(0.5);
+}
+
+
+/* REGALO */
+
+.seccion-regalo {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#caja-regalo {
+    font-size: 100px;
+    cursor: pointer;
+    margin: 25px;
+    transition: transform 0.5s;
+}
+
+#caja-regalo:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+#mensaje-regalo {
+    display: none;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid gold;
+    border-radius: 20px;
+    animation: aparecer 1s ease;
+}
+
+#mensaje-regalo h3 {
+    color: #ffd700;
+    font-size: 25px;
+}
+
+#mensaje-regalo p {
+    line-height: 1.8;
+}
+
+#mensaje-regalo div {
+    font-size: 30px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* BOTONES */
+
+button {
+    background: #a50000;
+    color: white;
+    border: 2px solid gold;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: gold;
+    color: #073b2b;
+    transform: scale(1.08);
+}
+
+
+/* PERSONALIZACION */
+
+.personalizar {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+/* PIE DE PAGINA */
+
+footer {
+    padding: 45px 20px;
+    background: #041f18;
+    border-top: 2px solid gold;
+}
+
+footer h2 {
+    color: #ffd700;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+
+/* NIEVE */
+
+.copo {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: caer linear forwards;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* TEMAS */
+
+body.tema-noche {
+    background: #101c3c;
+}
+
+body.tema-rojo {
+    background: #720b16;
+}
+
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 15px;
+        font-size: 13px;
+    }
+
+    header {
+        padding: 65px 15px;
+    }
+
+    header h2 {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    .poema {
+        font-size: 15px;
+        padding: 25px 12px;
+    }
+
+    .tiempo {
+        width: 42%;
+    }
+
+    .tiempo span {
+        font-size: 28px;
+    }
+
+    .etiqueta {
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+
+}
